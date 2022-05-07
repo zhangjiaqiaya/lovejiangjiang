@@ -50,7 +50,7 @@
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
-            <audio src="https://www.joy127.com/url/84270.mp3" autoplay="autoplay" preload="auto"></audio>
+            <audio src="https://www.joy127.com/url/84270.mp3" autoplay="autoplay" preload="auto" id="bgmusic"></audio>
         </div>
     
     <script>
@@ -113,6 +113,9 @@
         var hold = 1;
 
         canvas.click(function(e) {
+                var bgmusic = document.getElementById('bgmusic');
+		
+		bgmusic.play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
